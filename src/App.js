@@ -1,25 +1,23 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
+import Counter from './Counter';
+import EventPractice from './EventPractice';
+import MyComponent from './MyComponent';
+import Say from './Say';
 
-function App() {
+const App = () => {
+  const name = '리액트';
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1 className="react">{name}</h1>
+      <MyComponent name={name} favNum={333}>
+        REACT
+      </MyComponent>
+      <Counter />
+      <Say />
+      <EventPractice />
     </div>
   );
-}
+};
 
 export default App;
